@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 850px;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #0a66c2;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+.section {
+    margin-top: 25px;
+}
+
+.badge {
+    display: inline-block;
+    background: #e8f1ff;
+    color: #0a66c2;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.counter {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maurice Tyree - Cloud Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Maurice Tyree</h1>
+        <h2>Azure Cloud Engineer in Training</h2>
+
+        <div class="section">
+            <p>
+                I am building hands-on Azure cloud engineering skills through real projects,
+                including Azure CLI, Terraform, Linux, networking, storage, monitoring,
+                and automation.
+            </p>
+        </div>
+
+        <div class="section">
+            <h3>Cloud Skills</h3>
+            <span class="badge">Azure CLI</span>
+            <span class="badge">Terraform</span>
+            <span class="badge">Linux</span>
+            <span class="badge">Networking</span>
+            <span class="badge">Storage Accounts</span>
+            <span class="badge">Azure Functions</span>
+            <span class="badge">Cosmos DB</span>
+        </div>
+
+        <div class="section">
+            <h3>Projects</h3>
+            <p><p><strong>Cloud Resume Project:</strong> Hosted on Azure Storage Static Website with an Azure Function visitor counter backed by Cosmos DB.</p></p>
+        </div>
+
+        <div class="counter">
+    Visitor Count: <span id="visitor-count">Loading...</span>
+</div>
+    </div>
+<script>
+async function getVisitorCount() {
+    const response = await fetch("https://cloudresume-function-maurice01.azurewebsites.net/api/visitorCounter");
+    const data = await response.json();
+
+    document.getElementById("visitor-count").innerText = data.count;
+}
+
+getVisitorCount();
+</script>
+</body>
+</html>
