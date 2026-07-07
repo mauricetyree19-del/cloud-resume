@@ -27,11 +27,13 @@ jobs:
               --destination '$web' \
               --source . \
               --pattern "*.html" \
-              --overwrite
+              --overwrite \
+              --auth-mode login
 
             az storage blob upload-batch \
               --account-name cloudresumemaurice01 \
               --destination '$web' \
               --source . \
               --pattern "*.css" \
-              --overwrite
+              --overwrite \
+              --auth-mode login
